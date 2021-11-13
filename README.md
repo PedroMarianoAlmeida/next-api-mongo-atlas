@@ -37,6 +37,6 @@ This Next.js endpoint needs to receive a body with an Object who has the followi
 ```
 
 So you can send this information the way you see fit, but in the list above I made some examples:
-- [Postman](https://github.com/PedroMarianoAlmeida/next-api-mongo-atlas/blob/main/examples/postman.md)
-- [REST Client (VS Code Extension)](https://github.com/PedroMarianoAlmeida/next-api-mongo-atlas/blob/main/examples/rest-client.md)
-- [Fetch based function](https://github.com/PedroMarianoAlmeida/next-api-mongo-atlas/blob/main/examples/fetch-based.md)
+- [Postman](https://github.com/PedroMarianoAlmeida/next-api-mongo-atlas/blob/main/example/postman.md)
+- [REST Client (VS Code Extension)](https://github.com/PedroMarianoAlmeida/next-api-mongo-atlas/blob/main/example/rest-client.md)
+- [Fetch based function](https://github.com/PedroMarianoAlmeida/next-api-mongo-atlas/blob/main/example/fetch-based.md)

@@ -6,7 +6,7 @@ Conect the Mongo DB Atlas with your Next.js App adding just **ONE FILE** on your
 ## Set up
 
 1. Open any Next.js Project (or create a new one) 
-2. Install [mongodb](https://www.npmjs.com/package/mongodb) ( ```npm i mongodb``` or ```yarn mongodb```)
+2. Install [mongodb](https://www.npmjs.com/package/mongodb) ( ```npm i mongodb``` or ```yarn add mongodb```)
 3. Get your mongo string required to connection (if you don't know how, check [this tutorial](https://www.youtube.com/watch?v=S4fi6Qux-4g) - only the first 15 min - and [this repo](https://github.com/mongodb-developer/mongodb-next-todo))
 4. Add a enviorement variable called ```MONGO_URI``` and put the mongoDb string, like in the image bellow
 
@@ -37,6 +37,6 @@ This Next.js endpoint needs to receive a body with an Object who has the followi
 ```
 
 So you can send this information the way you see fit, but in the list above I made some examples:
-- [Postman](https://github.com/PedroMarianoAlmeida/next-api-mongo-atlas/blob/main/example/postman.md)
-- [REST Client (VS Code Extension)](https://github.com/PedroMarianoAlmeida/next-api-mongo-atlas/blob/main/example/rest-client.md)
-- [Fetch based function](https://github.com/PedroMarianoAlmeida/next-api-mongo-atlas/blob/main/example/fetch-based.md)
+- [Postman](https://github.com/PedroMarianoAlmeida/next-api-mongo-atlas/blob/main/example/postman/postman.md)
+- [REST Client (VS Code Extension)](https://github.com/PedroMarianoAlmeida/next-api-mongo-atlas/blob/main/example/rest-client/rest-client.md)
+- [Fetch based function](https://github.com/PedroMarianoAlmeida/next-api-mongo-atlas/blob/main/example/fetch-based/fetch-based.md)

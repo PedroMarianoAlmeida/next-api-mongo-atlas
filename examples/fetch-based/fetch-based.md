@@ -4,7 +4,7 @@ There is an extra tool to help using the endpoint, it is a async function that r
 
 ## Set up
 
-1. Copy [handleMongo.js](https://github.com/PedroMarianoAlmeida/next-api-mongo-atlas/blob/main/example/fetch-based/handleMongo.js) and paste in your project
+1. Copy [handleMongo.js](https://github.com/PedroMarianoAlmeida/next-api-mongo-atlas/blob/main/examples/fetch-based/handleMongo.js) and paste in your project
 
 2. Use anywhere passing an Object as specified in the initial tutorial
 

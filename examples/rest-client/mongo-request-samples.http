@@ -1,0 +1,52 @@
+#Insert One
+http://localhost:3000/api/mongodb/
+content-type: application/json
+
+{
+   "mongo": {
+        "db": "test",
+        "collection": "accountA",
+        "action": "insertOne",
+        "data": {
+            "name": "My info",
+            "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+        }
+    }
+}
+
+###
+#Insert Many
+http://localhost:3000/api/mongodb
+content-type: application/json
+
+{
+    "mongo": {
+        "db": "test",
+        "collection": "accountB",
+        "action": "insertMany",
+        "data": [
+            {
+                "name": "AAA",
+                "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+            },
+            {
+                "name": "BBB",
+                "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+            }
+        ]
+    }
+}
+
+###
+# Clean a colection
+http://localhost:3000/api/mongodb
+content-type: application/json
+
+{
+    "mongo": {
+        "db": "test",
+        "collection": "accountB",
+        "action": "remove",
+        "data": {}
+    }
+}

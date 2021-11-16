@@ -48,6 +48,25 @@ const requestValidation = (mongo) => {
   return { ok: true, message: "" };
 };
 
+const responseTreatment = async (mongo, response) => {
+  // https://docs.mongodb.com/drivers/node/current/fundamentals/crud/read-operations/cursor/
+  const collectionFunctionsDirectlyReturnCursors = [
+    'find',
+    'aggregate',
+    'listIndexes',
+  ]
+  const dbFunctionsDirectlyReturnCursors = ['aggregate', 'listCollections']
+
+  const { db, collection, action, data } = mongo
+
+  if (collection === '' && dbFunctionsDirectlyReturnCursors.includes(action))
+    return await response.toArray()
+  if (collectionFunctionsDirectlyReturnCursors.includes(action))
+    return await response.toArray()
+
+  return response
+}
+
 export default async function handler(req, res) {
   const { mongo } = req.body;
   const { db, collection, action, data } = mongo;
@@ -63,5 +82,7 @@ export default async function handler(req, res) {
 
   let response = await mongoCloud[action](data);
   if (!response) return res.status(404);
-  res.status(200).json(response);
+  
+  const responseTreated = await responseTreatment(mongo, response)
+  res.status(200).json(responseTreated);
 }

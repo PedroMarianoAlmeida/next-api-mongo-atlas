@@ -1,6 +1,6 @@
-const handleMongo = async (mongoObject) => {
+const handleMongo = async (mongoObject, url = '') => {
   try {
-    const res = await fetch("/api/mongodb/", {
+    const res = await fetch(`${url}/api/mongodb/`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(mongoObject),
